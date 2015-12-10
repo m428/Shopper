@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <p class="flash">
+    <%= flash.notice %>
+  </p>
+  <div id="container">
+    <div id="content">
+      <%= yield %>
+      <!-- <hr> -->
+      <!-- creates footer displaying user login status -->
+      <div id="login-status">
+        <h6>
+          <% if logged_in? %>
+            <%= "Logged in as #{current_user.email}" %>
+          <% else %>
+            Logged out
+          <% end %>
+        </h6>
+      </div>
+    </div>
+  </div>
 </body>
-</html>
