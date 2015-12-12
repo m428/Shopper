@@ -1,12 +1,19 @@
+
 <h1>All Groceries</h1>
 
-<ul id="posts">
-  <% @posts.each do |post| %>
-    <li>
-      <%= link_to post.title, post_path(post), class: "post_title", id: "post_#{post.id}" %>
-    </li>
-  <% end %>
-</ul>
+<% if logged_in? %>
+  <% @user = current_user %>
+  <%= "Hello " + current_user.username %><br>
+  <%= current_user.id %><br>
+  <ul id="posts">
+    <% @posts.each do |post| %>
+      <li>
+        <%= link_to post.title, post_path(post), class: "post_title", id: "post_#{post.id}" %>
+      </li>
+    <% end %>
+  </ul>
+  <% else %>
+<% end %>
 
 
 <%= link_to "Add Grocery Item", new_post_path, class: "new_post" %>
