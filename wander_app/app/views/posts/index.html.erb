@@ -1,0 +1,20 @@
+
+<% if logged_in? %>
+  <div id="current-user"><br>
+    <%= "Hello " + current_user.username + "!" %><br>
+    <h2>Your Grocery List</h2>
+  </div>
+  <ul id="posts">
+    <% @posts.each do |post| %>
+      <% if current_user.id == post.user_id %>
+      <li>
+        <%= link_to post.title, post_path(post), class: "post_title", id: "post_#{post.id}" %>
+      </li>
+      <% end %>
+    <% end %>
+  </ul>
+  <% else %>
+<% end %>
+
+
+<%= link_to "Add Grocery Item", new_post_path, class: "new_post" %>
