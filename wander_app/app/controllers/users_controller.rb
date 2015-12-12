@@ -3,14 +3,14 @@ class UsersController < ApplicationController
 
   before_filter :require_login, except: [:new, :create]
 
-  before_filter :zero_users_or_authenticated, only: [:new, :create]
-
-  def zero_users_or_authenticated
-    unless User.count == 0 || current_user
-      redirect_to root_path
-          return false
-    end
-  end # end filter
+  # before_filter :zero_users_or_authenticated, only: [:new, :create]
+  #
+  # def zero_users_or_authenticated
+  #   unless User.count == 0 || current_user
+  #     redirect_to root_path
+  #         return false
+  #   end
+  # end # end filter
 
 
   # GET /users

@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @post = Post.find(params[:id])
     #@posts = @user.posts - to make sure only a specific user's posts show up
   end
@@ -17,10 +18,9 @@ class PostsController < ApplicationController
   end
 
   def create
-  @user = current_user
-  #  @post = Post.new(params[user_id])
+  @user = current_user # give access to all the things
   @post = Post.new(post_params)
-  @post.user_id = params[:user_id]
+  @post.user_id = @user.id # set user_id param from database relationship to current_user id
   @post.save
      redirect_to posts_path
     #  redirect_to user_path(@post.user)
