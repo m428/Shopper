@@ -2,14 +2,15 @@
 <h1>All Groceries</h1>
 
 <% if logged_in? %>
-  <% @user = current_user %>
   <%= "Hello " + current_user.username %><br>
   <%= current_user.id %><br>
   <ul id="posts">
     <% @posts.each do |post| %>
+      <% if current_user.id == post.user_id %>
       <li>
         <%= link_to post.title, post_path(post), class: "post_title", id: "post_#{post.id}" %>
       </li>
+      <% end %>
     <% end %>
   </ul>
   <% else %>
