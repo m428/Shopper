@@ -17,9 +17,13 @@ class PostsController < ApplicationController
   end
 
   def create
-   @post = Post.new(post_params)
-   @post.save
+  @user = current_user
+  #  @post = Post.new(params[user_id])
+  @post = Post.new(post_params)
+  @post.user_id = params[:user_id]
+  @post.save
      redirect_to posts_path
+    #  redirect_to user_path(@post.user)
   end
 
   def edit
@@ -35,18 +39,14 @@ end
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-      # flash.notice = "Post/Food Log Deleted" - maybe include. Distracting?
+      # flash.notice = "Item Deleted" - maybe include. Distracting?
       redirect_to posts_path
   end
 
-
-
-
-
-
-
-
-
-
+# Just added the private
+private
+  def post_params
+    params.require(:post).permit(:title, :description)
+  end
 
 end # end of class
