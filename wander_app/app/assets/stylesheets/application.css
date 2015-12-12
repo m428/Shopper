@@ -1,6 +1,150 @@
-body {
-  background-color: grey
+
+#app-title {
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 40pt;
+  margin-bottom: 40px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+body {
+text-align: center;
+background-image: url(http://i.imgur.com/vallq6P.jpg);
+/*font-family: 'Lobster', cursive;*/
+/*font-family: 'Titan One', cursive;*/
+font-family: 'Oleo Script', cursive;
+margin-top: 115px;
+margin-bottom: 115px;
+color: #cc0000;
+padding: 0;
+}
+
+
+h1 {
+  font-size: 40pt;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h2 {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h4 {
+  text-align: center;
+}
+
+h6 {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+p {
+  max-width: 600px;
+  text-align: center;
+}
+
+div {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-left: 10px;
+  border-radius: 10px;
+  min-width: 600px;
+  max-width: 600px;
+  text-align: center;
+}
+
+#current-user {
+  text-align: center;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#container {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  min-width: 600px;
+  max-width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+#content {
+  margin: 0;
+  padding: 0;
+}
+
+#login-status {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+#login-footer {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  border: 0;
+  padding: 0;
+}
+
+.field {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  margin-top: 3px;
+  border: 0;
+  padding: 0;
+}
+
+.actions {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  border: 0;
+  padding: 0;
+}
+
+ul li {
+      list-style: none;
+}
+
+ul {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+}
+
+a:active {
+    color: red;
+}
+
+a:hover {
+    color: red;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

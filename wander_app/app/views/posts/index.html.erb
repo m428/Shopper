@@ -1,9 +1,9 @@
 
-<h1>All Groceries</h1>
-
 <% if logged_in? %>
-  <%= "Hello " + current_user.username %><br>
-  <%= current_user.id %><br>
+  <div id="current-user"><br>
+    <%= "Hello " + current_user.username + "!" %><br>
+    <h2>Your Grocery List</h2>
+  </div>
   <ul id="posts">
     <% @posts.each do |post| %>
       <% if current_user.id == post.user_id %>

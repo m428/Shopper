@@ -4,17 +4,14 @@
   <div class="field">
     <%= label_tag :email %>
     <%= text_field_tag :email %>
-    <br/>
   </div>
   <div class="field">
     <%= label_tag :password %>
-    <%= password_field_tag :password %>
-    <br/>
-  </div>
+    <%= password_field_tag :password %><br>
+  </div><br>
   <div class="actions">
     <%= submit_tag "Login" %>
   </div>
-<% end %>
+<% end %><br>
 
-<%= link_to 'See Grocery List', posts_path %><br>
 <%= link_to 'Signup', new_user_path %>
